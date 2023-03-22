@@ -1,6 +1,9 @@
 # action.yml
 name: 'GitInspector Action'
 description: 'Clones the repo and runs inspector outputing to the html folder'
+branding:
+  icon: activity
+  color: purple
 inputs:
   repo:  # id of input
     description: 'Repo to test'
