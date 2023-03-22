@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: gitinspector action step
-        uses: ./ # Uses an action in the root directory
+        uses: letheanVPN/gitinspector-action@v1
         id: hello
         with:
           repo: 'letheanVPN/blockchain-iTw3'
