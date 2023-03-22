@@ -14,3 +14,8 @@ jobs:
         id: hello
         with:
           repo: 'letheanVPN/blockchain-iTw3'
+      - name: gitinspector coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: gitinspector-report
+          path: html/letheanVPN/blockchain-iTw3.html
