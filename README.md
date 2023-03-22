@@ -11,6 +11,25 @@ This action runs gitinspector.
 
 ## Example usage
 
-uses: actions/gitinspector-action@v2
-with:
-repo: letheanVPN/blockchain-iTw3'
+```yaml
+on: [push]
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Run Checker
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: gitinspector action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
+        with:
+          repo: 'letheanVPN/blockchain-iTw3'
+      - name: gitinspector coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: gitinspector-report
+          path: html/letheanVPN/blockchain-iTw3.html
+```
